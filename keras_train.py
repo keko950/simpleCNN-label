@@ -37,7 +37,7 @@ num_classes = len(class_names)
 print(class_names)
 
 
-# Normalize the data
+# Normddalize the data
 normalization_layer = layers.Rescaling(1./255)
 
 train_ds = train_ds.map(lambda x, y: (normalization_layer(x), y), num_parallel_calls=tf.data.AUTOTUNE)
